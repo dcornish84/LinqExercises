@@ -1,0 +1,11 @@
+/Users/davidcornish/workspace/csharp/exercises/linq/bin/Debug/netcoreapp3.0/linq
+/Users/davidcornish/workspace/csharp/exercises/linq/bin/Debug/netcoreapp3.0/linq.deps.json
+/Users/davidcornish/workspace/csharp/exercises/linq/bin/Debug/netcoreapp3.0/linq.runtimeconfig.json
+/Users/davidcornish/workspace/csharp/exercises/linq/bin/Debug/netcoreapp3.0/linq.runtimeconfig.dev.json
+/Users/davidcornish/workspace/csharp/exercises/linq/bin/Debug/netcoreapp3.0/linq.dll
+/Users/davidcornish/workspace/csharp/exercises/linq/bin/Debug/netcoreapp3.0/linq.pdb
+/Users/davidcornish/workspace/csharp/exercises/linq/obj/Debug/netcoreapp3.0/linq.csprojAssemblyReference.cache
+/Users/davidcornish/workspace/csharp/exercises/linq/obj/Debug/netcoreapp3.0/linq.AssemblyInfoInputs.cache
+/Users/davidcornish/workspace/csharp/exercises/linq/obj/Debug/netcoreapp3.0/linq.AssemblyInfo.cs
+/Users/davidcornish/workspace/csharp/exercises/linq/obj/Debug/netcoreapp3.0/linq.dll
+/Users/davidcornish/workspace/csharp/exercises/linq/obj/Debug/netcoreapp3.0/linq.pdb

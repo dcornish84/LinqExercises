@@ -17,6 +17,11 @@ namespace linq
                 return L;
             }).ToList();
 
+            foreach (var f in LFruits)
+            {
+                Console.WriteLine(f);
+            }
+
             // Which of the following numbers are multiples of 4 or 6
             List<int> numbers = new List<int>()
             {
@@ -41,6 +46,11 @@ namespace linq
                 bool isMultiples = (num % 4 == 0 || num % 6 == 0);
                 return isMultiples;
             }).ToList();
+
+            foreach (var num in fourSixMultiples)
+            {
+                Console.WriteLine(num);
+            }
 
             // Order these student names alphabetically, in descending order (Z to A)
             List<string> names = new List<string>()
@@ -73,6 +83,11 @@ namespace linq
 
             List<string> descend = names.OrderByDescending(name => name).ToList();
 
+            foreach (var name in descend)
+            {
+                Console.WriteLine(name);
+            }
+
             // Build a collection of these numbers sorted in ascending order
             List<int> numbersAscend = new List<int>()
             {
@@ -94,6 +109,11 @@ namespace linq
 
             List<int> Ascend = numbersAscend.OrderBy(numbersAsc => numbersAsc).ToList();
 
+            foreach (var numbersAsc in Ascend)
+            {
+                Console.WriteLine(numbersAsc);
+            }
+
             // Output how many numbers are in this list
             List<int> fakeChickens = new List<int>()
             {
@@ -114,6 +134,7 @@ namespace linq
             };
 
             int count = fakeChickens.Count();
+            Console.WriteLine($"There are {fakeChickens.Count()} numbers in the fake chicken list.");
 
             // How much money have we made?
             List<double> purchases = new List<double>()
@@ -130,6 +151,7 @@ namespace linq
             };
 
             double presents = purchases.Sum();
+            Console.WriteLine($"We made {purchases.Sum()} today.");
 
             // What is our most expensive product?
             List<double> prices = new List<double>()
@@ -146,6 +168,7 @@ namespace linq
             };
 
             double total = prices.Max();
+            Console.WriteLine($"Our most expensive product costs {prices.Max()} dollars");
 
             /*
     Store each number in the following List until a perfect square
@@ -182,27 +205,29 @@ namespace linq
             {
                 Console.WriteLine(item);
             }
-            List<Customer> customers = new List<Customer>() {
-            new Customer(){ Name="Bob Lesman", Balance=80345.66, Bank="FTB"},
-            new Customer(){ Name="Joe Landy", Balance=9284756.21, Bank="WF"},
-            new Customer(){ Name="Meg Ford", Balance=487233.01, Bank="BOA"},
-            new Customer(){ Name="Peg Vale", Balance=7001449.92, Bank="BOA"},
-            new Customer(){ Name="Mike Johnson", Balance=790872.12, Bank="WF"},
-            new Customer(){ Name="Les Paul", Balance=8374892.54, Bank="WF"},
-            new Customer(){ Name="Sid Crosby", Balance=957436.39, Bank="FTB"},
-            new Customer(){ Name="Sarah Ng", Balance=56562389.85, Bank="FTB"},
-            new Customer(){ Name="Tina Fey", Balance=1000000.00, Bank="CITI"},
-            new Customer(){ Name="Sid Brown", Balance=49582.68, Bank="CITI"}
-        };
+            List<Customer> customers = new List<Customer>()
+            {
+                new Customer() { Name = "Bob Lesman", Balance = 80345.66, Bank = "FTB" },
+                new Customer() { Name = "Joe Landy", Balance = 9284756.21, Bank = "WF" },
+                new Customer() { Name = "Meg Ford", Balance = 487233.01, Bank = "BOA" },
+                new Customer() { Name = "Peg Vale", Balance = 7001449.92, Bank = "BOA" },
+                new Customer() { Name = "Mike Johnson", Balance = 790872.12, Bank = "WF" },
+                new Customer() { Name = "Les Paul", Balance = 8374892.54, Bank = "WF" },
+                new Customer() { Name = "Sid Crosby", Balance = 957436.39, Bank = "FTB" },
+                new Customer() { Name = "Sarah Ng", Balance = 56562389.85, Bank = "FTB" },
+                new Customer() { Name = "Tina Fey", Balance = 1000000.00, Bank = "CITI" },
+                new Customer() { Name = "Sid Brown", Balance = 49582.68, Bank = "CITI" }
+            };
             var groups = customers.Where(c => c.Balance >= 1_000_000)
-                        .GroupBy(c => c.Bank);
+                .GroupBy(c => c.Bank).ToList();
 
             foreach (var group in groups)
             {
                 Console.WriteLine(group.Key);
                 foreach (Customer customer in group)
                 {
-                    Console.WriteLine($"**** {customer.Name}");
+                    Console.WriteLine($"* {customer.Name}");
+                    Console.WriteLine(customer.Balance);
                 }
             }
         }
